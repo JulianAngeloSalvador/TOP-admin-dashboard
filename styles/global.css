@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Londrina+Solid:wght@100;300;400;900&display=swap");
+
+:root {
+  --brown: #3f2305;
+  --white: #f5f5f5;
+  --grey: #dfd7bf;
+  --bg-grey: #d9d9d9;
+  --beige: #f2ead3;
+  --dimmed: rgba(0, 0, 0, 0.5);
+  --transparent: rgba(250, 250, 250, 0.5);
+  --shadow: rgba(149, 157, 165, 0.2);
+
+  --fast-transition: 0.3s ease-in-out;
+  --slow-transition: 0.75s ease-in-out;
+  --fast-animation-forward: 0.5s ease forwards;
+  --slow-animation-forward: 1s ease forwards;
+  --font-cherry: "Cherry Bomb One", "Londrina Solid", cursive;
+  --font-londrina: "Londrina Solid", "Cherry Bomb One", cursive;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-londrina);
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  color: var(--white);
+}

@@ -1,0 +1,96 @@
+/* STYLE FOR WELCOMING ONLY!  */
+
+.clip-container {
+  position: absolute;
+  inset: 0;
+
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.clip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background-color: var(--brown);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  animation: clip-up var(--fast-animation-forward);
+  animation-delay: 2s;
+}
+
+@keyframes clip-up {
+  0% {
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+  }
+}
+
+.clip-container #text-svg {
+  overflow: visible;
+  animation: pop var(--fast-animation-forward),
+    shadowAnimate var(--fast-animation-forward);
+  animation-delay: 1.05s;
+}
+
+#text-svg path {
+  fill: var(--white);
+  animation: pop var(--fast-animation-forward),
+    shadowAnimate var(--fast-animation-forward);
+  animation-delay: calc(var(--order) * 50ms);
+}
+
+@keyframes pop {
+  0%,
+  100% {
+  }
+  50% {
+    translate: 0 -10px;
+  }
+}
+
+@keyframes shadowAnimate {
+  0%,
+  100% {
+    filter: drop-shadow(0 10px 4px var(--dimmed));
+  }
+  50% {
+    filter: drop-shadow(0 25px 4px var(--dimmed));
+  }
+}
+
+/* END OF WELCOMING PAGE */
+
+body {
+  background-color: var(--bg-grey);
+  position: relative;
+  display: grid;
+}
+
+header {
+  background-color: var(--beige);
+  grid-area: header;
+}
+
+nav {
+  background: var(--brown);
+  grid-area: nav;
+}
+main {
+  background-color: palevioletred;
+  grid-area: main;
+}
+aside {
+  background-color: pink;
+  grid-area: aside;
+}
+footer {
+  background-color: var(--beige);
+  grid-area: footer;
+}
