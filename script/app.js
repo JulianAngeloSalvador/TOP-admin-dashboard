@@ -15,3 +15,31 @@ svgLetters.forEach((letter, index) => {
   // Step 5: Apply the inline style with --order to the child element
   letter.style.setProperty("--order", orderValue);
 });
+
+const searchField = document.querySelector("#search-wrapper");
+const searchIcon = document.querySelector("#search-wrapper #search-icon");
+const search = document.querySelector("#search");
+const headerOverlay = document.querySelector("#header-overlay");
+const quickAppsBtn = document.querySelector("#apps");
+const quickApps = document.querySelector(".quickactions-icon");
+const userToggler = document.querySelector("#user-container");
+const userDropdown = document.querySelector("#dropdown-container");
+
+search.addEventListener("focus", () => {
+  search.classList.add("search-toggled");
+  searchIcon.classList.add("icon-hide");
+  headerOverlay.classList.add("header-overlay-show");
+});
+search.addEventListener("blur", () => {
+  search.classList.remove("search-toggled");
+  searchIcon.classList.remove("icon-hide");
+  headerOverlay.classList.remove("header-overlay-show");
+});
+
+quickAppsBtn.addEventListener("click", () => {
+  quickApps.classList.toggle("mobileDisplay");
+});
+
+userToggler.addEventListener("click", () => {
+  userDropdown.classList.toggle("dropdown-show");
+});
