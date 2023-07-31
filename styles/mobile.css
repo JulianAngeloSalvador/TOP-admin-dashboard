@@ -126,4 +126,125 @@
   body {
     font-size: 10px;
   }
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    overflow: auto;
+  }
+  header {
+    flex: 1;
+    gap: 0 1rem;
+    align-self: flex-start;
+  }
+  .nav-header {
+    font-size: 1.5rem;
+  }
+  #menuClose {
+    display: flex;
+    background-color: var(--red);
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    padding: 0.95rem;
+    scale: 0;
+  }
+  .toggler-animate {
+    animation: scaledRotate var(--fast-animation-forward);
+  }
+
+  @keyframes scaledRotate {
+    to {
+      scale: 1;
+    }
+  }
+  #menuClose::before,
+  #menuClose::after,
+  #menuClose .line {
+    width: 90%;
+    height: 4px;
+    background-color: white;
+    border-radius: 4px;
+  }
+  #menuClose::before,
+  #menuClose::after {
+    position: absolute;
+    content: "";
+    transform-origin: center;
+  }
+  #menuClose::before {
+    translate: 0;
+    transform: rotate(-45deg);
+  }
+  #menuClose::after {
+    translate: 0;
+    transform: rotate(45deg);
+  }
+  #menuClose .line {
+    opacity: 0;
+  }
+  nav {
+    transform: translate(-100%, 0);
+    transition: var(--fast-transition);
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    z-index: 200;
+  }
+  nav.sidenavToggled {
+    transform: translate(0%, 0);
+  }
+
+  aside {
+    display: none;
+  }
+  #menuOpen {
+    display: flex;
+  }
+
+  #brandLogo {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .quickactions-container {
+    position: relative;
+  }
+
+  .quickactions-main #apps {
+    display: flex;
+  }
+  .quickactions-icon {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    opacity: 0;
+    gap: 2rem;
+    padding: 0em;
+    transform: translate(-50%, 0%);
+    transition: var(--fast-transition);
+    pointer-events: none;
+    z-index: -10;
+  }
+  .quickactions-icon.mobileDisplay {
+    display: flex;
+    position: absolute;
+    bottom: -50%;
+    transform: translate(-50%, 50%);
+    opacity: 1;
+    background-color: var(--brown);
+    padding: 1em;
+    border-radius: 20px;
+    z-index: 1;
+    pointer-events: all;
+  }
+
+  main {
+    height: 100%;
+    max-height: 100%;
+  }
+  footer {
+    flex: 1;
+  }
 }

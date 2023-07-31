@@ -374,6 +374,11 @@ nav {
   animation-delay: var(--side-content-delay);
 }
 
+.nav-links:first-child {
+  background-color: var(--grey);
+  border-radius: 8px 0 0 8px;
+}
+
 .nav-links:hover {
   background-color: var(--grey);
   border-radius: 8px 0 0 8px;
@@ -537,6 +542,7 @@ aside {
 .trending-item {
   color: var(--brown);
   font-weight: 500;
+  padding-left: 0.5rem;
 }
 
 .trending-icon {
