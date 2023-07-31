@@ -43,3 +43,38 @@ quickAppsBtn.addEventListener("click", () => {
 userToggler.addEventListener("click", () => {
   userDropdown.classList.toggle("dropdown-show");
 });
+
+const navlinksWrapper = document.querySelector(".nav-content");
+const navlinks = document.querySelectorAll(".nav-content .nav-links");
+
+navlinks.forEach((link, index) => {
+  const linkOrder = index + 1;
+
+  link.style.setProperty("--link-order", linkOrder);
+});
+
+//menu btn
+const menuBtn = document.querySelector("#menuOpen");
+const menuClose = document.querySelector("#menuClose");
+const sideNav = document.querySelector("nav");
+
+menuBtn.addEventListener("click", () => {
+  sideNav.classList.add("sidenavToggled");
+  menuClose.classList.add("toggler-animate");
+});
+
+menuClose.addEventListener("click", () => {
+  menuClose.classList.remove("toggler-animate");
+  sideNav.classList.remove("sidenavToggled");
+});
+
+//cards
+//just for animation delay
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card, index) => {
+  const cardNumber = index + 1;
+
+  card.style.setProperty("--card", cardNumber);
+});

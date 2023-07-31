@@ -14,7 +14,7 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <!-- <div class="clip-container">
+    <div class="clip-container">
       <div class="clip">
         <svg
           id="text-svg"
@@ -65,12 +65,12 @@
           />
         </svg>
       </div>
-    </div> -->
+    </div>
 
-    <!-- <div class="hamburger-container">
-        <span class="line"></span>
-      </div> -->
     <header>
+      <div class="hamburger-container" id="menuOpen">
+        <span class="line"></span>
+      </div>
       <div class="header-content" id="brandname-container">
         <h1>Coffee Shop</h1>
         <div id="brandLogo"></div>
@@ -81,8 +81,11 @@
           <input type="search" name="" id="search" placeholder="Search" />
         </div>
         <div class="quickactions-main">
-          <i class="uil uil-apps" id="apps"></i>
+          <i class="uil uil-icons" id="apps"></i>
           <div class="quickactions-icon">
+            <div class="quickaction-content">
+              <i class="uil uil-plus"></i>
+            </div>
             <div class="quickaction-content">
               <i class="uil uil-phone"></i>
             </div>
@@ -114,10 +117,169 @@
       </div>
       <div class="overlay" id="header-overlay"></div>
     </header>
-    <nav></nav>
-    <main></main>
-    <aside></aside>
-    <footer></footer>
+    <nav>
+      <div class="nav-header content-title">
+        Menu
+        <div class="hamburger-container" id="menuClose">
+          <span class="line"></span>
+        </div>
+      </div>
+      <ul class="nav-content">
+        <li class="nav-links">
+          <i class="uil uil-apps"></i>
+          <a href="">Dashboard</a>
+        </li>
+        <li class="nav-links">
+          <i class="uil uil-users-alt"></i>
+          <a href="">Employees</a>
+        </li>
+        <li class="nav-links">
+          <i class="uil uil-clipboard-alt"></i>
+          <a href="">Tasks</a>
+        </li>
+        <li class="nav-links">
+          <i class="uil uil-schedule"></i>
+          <a href="">Events</a>
+        </li>
+        <li class="nav-links">
+          <i class="uil uil-analytics"></i>
+          <a href="">Ads Manager</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="section-header">Iced Beverages</div>
+      <div class="card" data-type="mocha">
+        <div class="coffee-image-wrapper">
+          <div class="coffee-image"></div>
+        </div>
+        <div class="card-details-wrapper">
+          <p class="card-details price">$50</p>
+          <p class="card-details coffee-title">Iced Mocha</p>
+        </div>
+      </div>
+
+      <div class="card" data-type="macchiato">
+        <div class="coffee-image-wrapper">
+          <div class="coffee-image"></div>
+        </div>
+        <div class="card-details-wrapper">
+          <p class="card-details price">$50</p>
+          <p class="card-details coffee-title">Iced Macchiato</p>
+        </div>
+      </div>
+
+      <div class="card" data-type="cappuccino">
+        <div class="coffee-image-wrapper">
+          <div class="coffee-image"></div>
+        </div>
+        <div class="card-details-wrapper">
+          <p class="card-details price">$50</p>
+          <p class="card-details coffee-title">Iced Cappuccino</p>
+        </div>
+      </div>
+
+      <div class="card" data-type="americano">
+        <div class="coffee-image-wrapper">
+          <div class="coffee-image"></div>
+        </div>
+        <div class="card-details-wrapper">
+          <p class="card-details price">$50</p>
+          <p class="card-details coffee-title">Iced Americano</p>
+        </div>
+      </div>
+
+      <div class="card" data-type="white-choco">
+        <div class="coffee-image-wrapper">
+          <div class="coffee-image"></div>
+        </div>
+        <div class="card-details-wrapper">
+          <p class="card-details price">$50</p>
+          <p class="card-details coffee-title">Iced White Choco</p>
+        </div>
+      </div>
+
+      <div class="card" data-type="latte">
+        <div class="coffee-image-wrapper">
+          <div class="coffee-image"></div>
+        </div>
+        <div class="card-details-wrapper">
+          <p class="card-details price">$50</p>
+          <p class="card-details coffee-title">Iced Latte</p>
+        </div>
+      </div>
+    </main>
+    <aside>
+      <div class="aside-content">
+        <div class="aside-content-header">
+          <p class="content-title">Announcement</p>
+        </div>
+        <div class="aside-content-body">
+          <p class="announcement">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+            autem?
+          </p>
+          <p class="announcement">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+            autem?
+          </p>
+          <p class="announcement">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+            autem?
+          </p>
+          <p class="announcement">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+            autem?
+          </p>
+          <p class="announcement">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+            autem?
+          </p>
+          <p class="announcement">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+            autem?
+          </p>
+          <p class="announcement">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+            autem?
+          </p>
+          <p class="announcement">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+            autem?
+          </p>
+        </div>
+      </div>
+      <div class="aside-content">
+        <div class="aside-content-header">
+          <p class="content-title">Trending Product</p>
+        </div>
+        <div class="aside-content-body-trending">
+          <div class="trending-icon"></div>
+          <p class="trending-item">Iced Mocha</p>
+          <div class="trending-icon"></div>
+          <p class="trending-item">Iced Americano</p>
+          <div class="trending-icon"></div>
+          <p class="trending-item">Iced Macchiato</p>
+        </div>
+      </div>
+    </aside>
+    <footer>
+      <a
+        href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard"
+        target="_blank"
+        class="footer-header"
+        >Admin Dashboard</a
+      >
+
+      <p class="footer-header-sub">The Odin Project</p>
+      <a
+        id="github-link"
+        href="https://github.com/TenshinYozora"
+        target="_blank"
+      >
+        <i class="uil uil-github"></i>Julian Salvador</a
+      >
+    </footer>
     <script defer src="script/app.js"></script>
   </body>
 </html>
